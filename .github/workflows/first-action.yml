@@ -1,6 +1,6 @@
 name: first-test-action
 
-on: [push, fork]
+on: [push]
 
 jobs: 
     first_job:
@@ -11,5 +11,12 @@ jobs:
         
           - name: list 
             run: ls
+    
+    second_job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: print_again
+            run: echo "printed again"
+
 
 
